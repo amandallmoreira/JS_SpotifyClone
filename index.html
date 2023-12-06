@@ -9,7 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 <body>
-    <div id=root class="container-fluid bg-dark m-0 p-0 vh-100">
+    <div id=root class="container-fluid bg-dark m-0 p-0 vh-100 ">
         <header class="container-fluid m-0 p-2 d-flex justify-content-between" style="height: 7%;">
             <!-- more -->
             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="whitesmoke" class="bi bi-three-dots" viewBox="0 0 16 16">
@@ -32,11 +32,85 @@
              </div>
 
         </header>
-        <main class="container-fluid m-0 p-0 row" style="height: 80%;">
+        <main class="container-fluid m-0 p-0 row " style="height: 80%;">
             <!-- Menu Lateral -->
-            <aside id="menuLateral" class="bg-danger col-2">Teste</aside>
+            <aside id="menuLateral" class="col-2">Teste</aside>
             <!-- Conteudo Principal -->
-            <div id="conteudoPrincipal" class="bg-primary col-10">Teste</div>
+            <div id="conteudoPrincipal" class="col-10">
+                <section id="recentemente" class="text-white container-fluid">
+                    <h3>Tocados recentemente</h3>
+                    <div class="musicasLista d-flex overflow-x">
+                        <!-- MUSICA 1-->
+                        <!-- Button trigger modal EMINEM-->
+                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#eminemModal">
+                            <div class="bg-dark text-white card p-2 " style="width: 12rem;">
+                                <img src="Images/Musics/eminem.jpg" class="rounded card-img-top" alt="Album Best of Eminem">
+                                    <div class="card-body">
+                                      <h3>Best of Eminem</h3>  
+                                      <p class="card-text">Eminem</p>
+                                    </div>
+                            </div>
+                        </button>
+                            
+                        <!-- MUSICA 2-->
+                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#eminemModal">
+                            <div class="bg-dark text-white card p-2 " style="width: 12rem;">
+                                <img src="Images/Musics/taylorSwift.jpg" class="rounded card-img-top" alt="Album Taylor Swift">
+                                <div class="card-body">
+                                  <h3>Taylor Swift</h3>  
+                                  <p class="card-text">Taylor Swift</p>
+                                </div>
+                            </div>
+                        </button>
+                        
+                         <!-- MUSICA 3-->
+                         <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#eminemModal">
+                            <div class="bg-dark text-white card p-2 " style="width: 12rem;">
+                                <img src="Images/Musics/billieEilish.jpg" class="rounded card-img-top" alt="Album Billie Eilish">
+                                <div class="card-body">
+                                  <h3>Billie Eilish</h3>  
+                                  <p class="card-text">Billie Eilish</p>
+                                </div>
+                            </div>
+                        </button>
+                        
+                         <!-- MUSICA 4-->
+                         <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#eminemModal">
+                            <div class="bg-dark text-white card p-2 " style="width: 12rem;">
+                                <img src="Images/Musics/articMonkeys.jpg" class="rounded card-img-top" alt="Album AM">
+                                <div class="card-body">
+                                  <h3>AM</h3>  
+                                  <p class="card-text">Artic Monkeys</p>
+                                </div>
+                            </div>
+                        </button>
+                         
+                         <!-- MUSICA 5-->
+                         <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#eminemModal">
+                            <div class="bg-dark text-white card p-2 " style="width: 12rem;">
+                                <img src="Images/Musics/toveLo.jpg" class="rounded card-img-top" alt="Album ToveLo">
+                                <div class="card-body">
+                                  <h3>ToveLo</h3>  
+                                  <p class="card-text">ToveLo</p>
+                                </div>
+                            </div>
+                        </button>
+                        
+                         <!-- MUSICA 6-->
+                         <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#eminemModal">
+                            <div class="bg-dark text-white card p-2 " style="width: 12rem;">
+                                <img src="Images/Musics/edSheeran.jpg" class="rounded card-img-top" alt="Album Taylor Swift">
+                                <div class="card-body">
+                                  <h3>Ed Sheeran</h3>  
+                                  <p class="card-text">Ed Sheeran</p>
+                                </div>
+                            </div>
+                        </button>
+                         
+                    </div>
+                </section>
+            </div>
+            
         </main>
         <footer class="container-fluid m-0 p-0 row" style="height: 13%;" >
             <div id="musicaInfo"></div>
@@ -84,6 +158,24 @@
         </footer>
     </div>
     
+    <!-- Modal EMINEM -->
+        <div class="modal fade" id="eminemModal" tabindex="-1" aria-labelledby="eminemModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h1 class="modal-title fs-5" id="eminemModalLabel">Eminem</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                Best of Eminem
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+            </div>
+        </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
